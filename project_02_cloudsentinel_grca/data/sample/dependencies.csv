@@ -1,0 +1,7 @@
+upstream_service,downstream_service
+service_00,service_01
+service_00,service_02
+service_02,service_03
+service_00,service_04
+service_02,service_04
+service_02,service_05

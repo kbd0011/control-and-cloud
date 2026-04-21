@@ -1,0 +1,1 @@
+"""safecool.envs subpackage."""

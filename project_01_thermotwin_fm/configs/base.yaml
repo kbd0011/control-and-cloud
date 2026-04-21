@@ -1,0 +1,24 @@
+project_name: "ThermoTwin-FM"
+seed: 42
+artifacts_dir: "artifacts"
+data_dir: "data/sample"
+
+train:
+  batch_size: 128
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stop_patience: 3
+  num_workers: 0
+  device: "cpu"           # set "cuda" if available
+  grad_clip: 1.0
+  val_fraction: 0.15
+  test_fraction: 0.15
+
+eval:
+  horizons_minutes: [5, 15, 60]
+  hotspot_threshold_c: 32.0
+  conformal_alpha: 0.1     # target 90% intervals
+
+logging:
+  level: "INFO"

@@ -1,0 +1,25 @@
+dataset:
+  name: "ibm_cloud_like_demo"
+  source: "synthetic"               # "synthetic" | "csv" | "parquet"
+  telemetry_path: "data/sample/telemetry.csv"
+  entity_path: "data/sample/entities.csv"
+  dependencies_path: "data/sample/dependencies.csv"
+  incidents_path: "data/sample/incidents.csv"
+  cadence_minutes: 5
+  n_entities: 24
+  n_metrics_per_entity: 4
+  duration_days: 7
+  sparsity_threshold: 0.3           # columns with > this NA rate are split off as sparse
+  # External, out-of-domain evaluation hook (CESNET TimeSeries24 shape).
+  external_telemetry_path: "data/sample/cesnet_external.csv"
+
+windowing:
+  context_steps: 48                 # 4 hours of history @ 5 min
+  horizon_steps: 6                  # 30 min
+  stride: 3
+
+augmentation:
+  enabled: true
+  event_ratio: 0.25
+  patterns: ["spike", "drift", "saturation", "correlated_failure"]
+  seed: 123

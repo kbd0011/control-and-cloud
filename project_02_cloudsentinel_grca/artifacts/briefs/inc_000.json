@@ -1,0 +1,41 @@
+{
+  "incident_id": "inc_000",
+  "window_start": "2024-01-07 04:25:00",
+  "window_end": "2024-01-07 06:10:00",
+  "top_candidate": {
+    "entity_id": "ent_23",
+    "service": "service_05",
+    "score": 0.07186597730042056
+  },
+  "confidence_label": "Evidence is weakly suggestive",
+  "evidence": [
+    {
+      "candidate": "ent_23",
+      "path": [
+        "ent_23",
+        "ent_17"
+      ],
+      "target": "ent_17",
+      "rationale": "Candidate driver ent_23 (rank 1, score 0.072) reaches affected entity ent_17 via ent_23 \u2192 ent_17"
+    },
+    {
+      "candidate": "ent_17",
+      "path": [
+        "ent_17",
+        "ent_23"
+      ],
+      "target": "ent_23",
+      "rationale": "Candidate driver ent_17 (rank 2, score 0.047) reaches affected entity ent_23 via ent_17 \u2192 ent_23"
+    },
+    {
+      "candidate": "ent_02",
+      "path": [
+        "ent_02",
+        "ent_23"
+      ],
+      "target": "ent_23",
+      "rationale": "Candidate driver ent_02 (rank 3, score 0.044) reaches affected entity ent_23 via ent_02 \u2192 ent_23"
+    }
+  ],
+  "markdown_path": "artifacts/briefs/inc_000.md"
+}

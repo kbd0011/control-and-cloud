@@ -1,0 +1,22 @@
+[
+  {
+    "incident_id": "inc_000",
+    "top_candidate": {
+      "entity_id": "ent_23",
+      "service": "service_05",
+      "score": 0.07186597730042056
+    },
+    "confidence_label": "Evidence is weakly suggestive",
+    "markdown": "artifacts/briefs/inc_000.md"
+  },
+  {
+    "incident_id": "inc_008",
+    "top_candidate": {
+      "entity_id": "ent_00",
+      "service": "service_00",
+      "score": 0.06313298613596009
+    },
+    "confidence_label": "Evidence is weakly suggestive",
+    "markdown": "artifacts/briefs/inc_008.md"
+  }
+]

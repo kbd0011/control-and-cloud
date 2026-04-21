@@ -1,0 +1,24 @@
+{
+  "n_transitions": 3456,
+  "world_model": {
+    "final_loss": 0.034283701463469436
+  },
+  "ope": {
+    "wis": {
+      "method": "WIS",
+      "reward_estimate": -10.899140827784505,
+      "cost_estimate": 0.39531071472304075,
+      "reward_ci_low": -12.8715148028219,
+      "reward_ci_high": -9.543201140697569
+    },
+    "fqe": {
+      "method": "FQE",
+      "reward_estimate": -15.557039260864258,
+      "cost_estimate": 0.0,
+      "reward_ci_low": null,
+      "reward_ci_high": null
+    }
+  },
+  "budget_threshold": 1.92,
+  "ope_gate_pass": true
+}

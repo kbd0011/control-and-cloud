@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thermotwin"
+version = "0.1.0"
+description = "ThermoTwin-FM: Digital twin for rack thermal forecasting and what-if simulation in data centers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ThermoTwin-FM" }]
+dependencies = [
+    "numpy>=1.24,<3",
+    "pandas>=2.0,<3",
+    "scipy>=1.10,<2",
+    "scikit-learn>=1.3,<2",
+    "torch>=2.1,<3",
+    "pyyaml>=6.0,<7",
+    "pydantic>=2.5,<3",
+    "fastapi>=0.110,<0.120",
+    "uvicorn>=0.27,<1",
+    "networkx>=3.1,<4",
+    "matplotlib>=3.7,<4",
+]
+
+[project.optional-dependencies]
+# httpx is required by starlette.testclient / fastapi.testclient for the API tests.
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "httpx>=0.26,<1"]
+notebook = ["jupyter", "ipykernel"]
+
+[project.scripts]
+thermotwin-train = "thermotwin.train:main"
+thermotwin-evaluate = "thermotwin.evaluate:main"
+thermotwin-simulate = "thermotwin.simulate:main"
+thermotwin-generate-data = "thermotwin.data.synthetic:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+filterwarnings = ["ignore::DeprecationWarning"]

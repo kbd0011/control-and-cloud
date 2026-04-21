@@ -1,0 +1,40 @@
+{
+  "point_detection": {
+    "n": 57984,
+    "positive_rate": 0.01131346578366446,
+    "auroc": 0.7962602900595972,
+    "auprc": 0.0788692511483756,
+    "precision_at_threshold": 0.0,
+    "recall_at_threshold": 0.0,
+    "f1_at_threshold": 0.0,
+    "threshold": 0.7
+  },
+  "best_threshold": {
+    "threshold": 0.07307692307692308,
+    "f1": 0.15558838010832102
+  },
+  "lead_time": {
+    "mean_lead_time_minutes": null,
+    "n_incidents_detected": 0
+  },
+  "rca": {
+    "top_1_accuracy": 1.0,
+    "top_3_accuracy": 1.0,
+    "top_5_accuracy": 1.0,
+    "n_incidents": 2
+  },
+  "alert_budget": {
+    "daily_budget": 25,
+    "probability_threshold": 0.7,
+    "kept_events": 0,
+    "total_above_threshold": 0
+  },
+  "ood": {
+    "available": true,
+    "n_series": 6,
+    "n_timesteps": 12096,
+    "mean_prob": 0.037160669795462856,
+    "p95_prob": 0.1824561403508772,
+    "max_prob": 0.4864864864864864
+  }
+}

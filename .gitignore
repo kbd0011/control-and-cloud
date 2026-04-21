@@ -1,0 +1,18 @@
+# Virtual environments
+.prepush-review-venv/
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editors
+.idea/
+.vscode/
+*.swp

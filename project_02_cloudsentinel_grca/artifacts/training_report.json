@@ -1,0 +1,37 @@
+{
+  "detector": {
+    "n_series": 96,
+    "n_timesteps_total": 135552,
+    "positive_rate": 0.01732176581680831,
+    "default_weights": {
+      "zscore": 0.4,
+      "residual": 0.4,
+      "changepoint": 0.2
+    },
+    "logistic_coef": [
+      [
+        4.04031458259837,
+        -0.7185444738859202,
+        2.2552667022989783
+      ]
+    ],
+    "logistic_intercept": -7.218768360387861
+  },
+  "encoder": {
+    "losses": [
+      91.7150650024414,
+      89.00262451171875,
+      77.55834197998047,
+      74.10799407958984,
+      63.287532806396484
+    ],
+    "n_windows": 57
+  },
+  "graph": {
+    "n_nodes": 24,
+    "n_edges": 552
+  },
+  "train_end": "2024-01-05T21:35:00.000000",
+  "val_fraction": 0.15,
+  "test_fraction": 0.15
+}

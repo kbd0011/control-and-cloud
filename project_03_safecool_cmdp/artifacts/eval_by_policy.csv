@@ -1,0 +1,5 @@
+policy,mean_reward,sum_reward,mean_energy_kw,max_inlet_c,mean_inlet_c,cvar95_inlet_c,mean_rci,total_cost,viol_any,n_shield_intervened
+agent,-0.4369,-41.9419,4.369,22.3749,18.7505,21.8154,0.9735,0.0209,0.0833,0.0
+agent_shielded,-0.4376,-42.0086,4.3759,22.3529,18.7381,21.7989,0.985,0.0,0.0,74.3333
+conservative,-0.757,-72.6703,7.5698,21.614,17.109,21.066,1.0,0.0,0.0,0.0
+rule_based,-0.3167,-30.4002,3.1667,24.774,23.8797,24.6752,1.0,0.0,0.0,0.0

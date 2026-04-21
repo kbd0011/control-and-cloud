@@ -1,0 +1,60 @@
+# SafeCool-CMDP distilled surrogate
+
+Each tree approximates the trained agent's greedy action for one control dimension.
+These rules are an interpretable approximation intended for human review only.
+
+## Coolant supply delta (°C)
+
+|--- coolant_supply_c <= 19.03
+|   |--- inlet_temp_c <= 22.02
+|   |   |--- power_kw <= 3.97
+|   |   |   |--- cpu_load <= 0.21
+|   |   |   |   |--- value: [0.00]
+|   |   |   |--- cpu_load >  0.21
+|   |   |   |   |--- value: [-0.50]
+|   |   |--- power_kw >  3.97
+|   |   |   |--- value: [-0.50]
+|   |--- inlet_temp_c >  22.02
+|   |   |--- fan_speed_pct <= 84.06
+|   |   |   |--- value: [0.00]
+|   |   |--- fan_speed_pct >  84.06
+|   |   |   |--- value: [-0.50]
+|--- coolant_supply_c >  19.03
+|   |--- inlet_temp_c <= 22.55
+|   |   |--- outlet_temp_c <= 22.12
+|   |   |   |--- value: [-0.50]
+|   |   |--- outlet_temp_c >  22.12
+|   |   |   |--- ambient_temp_c <= 17.23
+|   |   |   |   |--- value: [0.48]
+|   |   |   |--- ambient_temp_c >  17.23
+|   |   |   |   |--- value: [0.10]
+|   |--- inlet_temp_c >  22.55
+|   |   |--- fan_speed_pct <= 84.82
+|   |   |   |--- cpu_load <= 0.24
+|   |   |   |   |--- value: [0.11]
+|   |   |   |--- cpu_load >  0.24
+|   |   |   |   |--- value: [0.00]
+|   |   |--- fan_speed_pct >  84.82
+|   |   |   |--- value: [-0.50]
+
+## Fan speed delta (percentage points)
+
+|--- ambient_temp_c <= 15.24
+|   |--- fan_speed_pct <= 46.85
+|   |   |--- coolant_supply_c <= 23.16
+|   |   |   |--- inlet_temp_c <= 23.29
+|   |   |   |   |--- value: [-5.00]
+|   |   |   |--- inlet_temp_c >  23.29
+|   |   |   |   |--- value: [0.00]
+|   |   |--- coolant_supply_c >  23.16
+|   |   |   |--- value: [0.00]
+|   |--- fan_speed_pct >  46.85
+|   |   |--- cpu_load <= 0.29
+|   |   |   |--- value: [0.00]
+|   |   |--- cpu_load >  0.29
+|   |   |   |--- fan_speed_pct <= 61.18
+|   |   |   |   |--- value: [-5.00]
+|   |   |   |--- fan_speed_pct >  61.18
+|   |   |   |   |--- value: [0.00]
+|--- ambient_temp_c >  15.24
+|   |--- value: [0.00]

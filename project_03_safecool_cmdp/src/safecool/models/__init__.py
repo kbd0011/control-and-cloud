@@ -1,0 +1,1 @@
+"""safecool.models subpackage."""

@@ -1,0 +1,19 @@
+{
+  "feature_names": [
+    "fan_speed_pct",
+    "coolant_supply_c",
+    "inlet_temp_c",
+    "outlet_temp_c",
+    "cpu_load",
+    "ambient_temp_c",
+    "power_kw"
+  ],
+  "fidelity_holdout": {
+    "mae_coolant": 0.025729513123622517,
+    "mae_fan": 0.075,
+    "agreement_within_half_grid": 0.955
+  },
+  "max_depth": 4,
+  "n_fit_states": 800,
+  "n_eval_states": 200
+}

@@ -1,0 +1,29 @@
+encoder:
+  backbone: "tcn_masked"            # local self-supervised TCN with masking
+  hidden_dim: 48
+  num_tcn_blocks: 2
+  tcn_kernel: 3
+  dropout: 0.1
+  mask_ratio: 0.2
+  mask_policy: "span"                # "span" | "random"
+  span_length: 4
+
+detector_fusion:
+  model: "logistic"                  # "logistic" | "fixed_weights"
+  calibration: "isotonic"            # "isotonic" | "none"
+
+graph:
+  use_dependency_edges: true
+  use_correlation_edges: true
+  correlation_threshold: 0.5
+  correlation_window: 96             # 8 hours for correlation computation
+
+incident_brief:
+  template: "markdown"               # only markdown supported in this repo
+  include_top_k_entities: 5
+  include_top_k_metrics: 8
+  include_graph_paths: 3
+  confidence_phrasing:
+    high: "Evidence is strongly suggestive"
+    medium: "Evidence is moderately suggestive"
+    low: "Evidence is weakly suggestive"

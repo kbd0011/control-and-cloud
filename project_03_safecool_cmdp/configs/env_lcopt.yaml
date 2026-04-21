@@ -1,0 +1,40 @@
+environment:
+  backend: "local_cooling_sim"     # honest label; NOT an LC-Opt wrapper.
+  episode_steps: 96                 # 8 hours at 5-min cadence
+  cadence_minutes: 5
+  scenario_families: ["nominal", "spike", "degradation", "heatwave"]
+  initial_inlet_temp_c: 22.0
+  initial_outlet_temp_c: 28.0
+  initial_coolant_supply_c: 18.0
+  initial_fan_speed_pct: 60.0
+  ambient_mean_c: 20.0
+  ambient_amplitude_c: 5.0
+  load_base: 0.45
+  load_amplitude: 0.2
+  thermal_tau_steps: 6              # first-order lag steps
+  outlet_gain: 12.0
+  # Power coefficients (kW) for the cost model.
+  pump_power_coef: 0.03
+  fan_power_coef: 0.0004            # kW per fan-% per step
+  it_power_coef: 0.18               # kW per unit load
+  noise_scale: 0.15
+
+action_space:
+  # Action is a 2-vector of DELTA setpoints: [coolant_supply_delta_c, fan_speed_delta_pct].
+  coolant_supply_delta_c:
+    min: -1.0
+    max: 1.0
+  fan_speed_delta_pct:
+    min: -10.0
+    max: 10.0
+  coolant_supply_bounds_c: [15.0, 24.0]
+  fan_speed_bounds_pct: [25.0, 100.0]
+
+safety:
+  max_inlet_temp_c: 27.0
+  min_inlet_temp_c: 15.0            # very cold air wastes energy and condenses moisture
+  max_outlet_temp_c: 40.0
+  max_rate_change_coolant_c: 1.0    # per step
+  max_rate_change_fan_pct: 10.0
+  rci_target: 0.98
+  inlet_warn_c: 26.0

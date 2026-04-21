@@ -1,0 +1,3 @@
+incident_id,pattern,root_entity,top_entity,root_rank,n_candidates
+inc_000,spike,ent_23,ent_23,1,24
+inc_008,spike,ent_00,ent_00,1,24

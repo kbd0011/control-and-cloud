@@ -1,0 +1,27 @@
+model:
+  backbone: "tcn_gru"
+  hidden_dim: 64
+  num_tcn_blocks: 3
+  tcn_kernel: 3
+  gru_layers: 1
+  dropout: 0.1
+  quantiles: [0.1, 0.5, 0.9]
+
+graph:
+  enabled: true
+  encoder: "gcn"            # "gcn" | "none"
+  n_message_passing: 2
+  soft_edge_corr_threshold: 0.4
+
+losses:
+  point_loss: "pinball"     # "pinball" | "mse"
+  use_physics_penalties: false
+  monotonicity_weight: 0.1
+  smoothness_weight: 0.05
+  control_lag_weight: 0.05
+
+baselines:
+  naive_last: true
+  seasonal_naive_lag_steps: 12   # ~1h periodicity bucket for sanity
+  linear_ar_enabled: true
+  linear_ar_lags: 6

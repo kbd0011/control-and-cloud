@@ -1,0 +1,33 @@
+project_name: "SafeCool-CMDP"
+seed: 42
+artifacts_dir: "artifacts"
+
+train:
+  world_model_epochs: 20
+  world_model_lr: 0.001
+  agent_epochs: 30
+  agent_batch_size: 256
+  agent_lr: 0.0003
+  discount: 0.97
+  target_update_tau: 0.005
+  cql_alpha: 0.5                # conservative penalty weight
+  lagrange_init: 0.1            # initial safety multiplier
+  lagrange_lr: 0.01
+  cost_budget: 0.02             # target per-step safety cost
+  device: "cpu"
+  grad_clip: 1.0
+
+ope:
+  discount: 0.97
+  wis_n_bootstrap: 200
+  fqe_epochs: 30
+  fqe_lr: 0.001
+
+deploy:
+  shadow_steps: 200
+  rollback_cvar_temp_c: 27.5
+  rollback_max_violations: 5
+  rollback_trip_window: 20      # rolling window for violation count
+
+logging:
+  level: "INFO"

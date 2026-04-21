@@ -1,0 +1,40 @@
+project_name: "CloudSentinel-GRCA"
+seed: 42
+artifacts_dir: "artifacts"
+data_dir: "data/sample"
+
+train:
+  batch_size: 128
+  encoder_epochs: 5
+  encoder_learning_rate: 0.001
+  encoder_weight_decay: 0.0001
+  device: "cpu"
+  grad_clip: 1.0
+  val_fraction: 0.15
+  test_fraction: 0.15
+
+detector:
+  rolling_window: 48          # 4 hours @ 5min
+  residual_window: 24
+  changepoint_window: 24
+  zscore_clip: 10.0
+  # Fixed weights for the three detector streams when no labels are available.
+  # Calibrated logistic meta-model is fit when labels are present.
+  default_fusion_weights:
+    zscore: 0.4
+    residual: 0.4
+    changepoint: 0.2
+
+rca:
+  personalization_alpha: 0.15       # teleport probability
+  damping: 0.85                      # PageRank damping
+  max_iterations: 100
+  convergence_tol: 0.00001
+  top_k: 5
+
+alerts:
+  daily_budget: 25
+  probability_threshold: 0.7
+
+logging:
+  level: "INFO"

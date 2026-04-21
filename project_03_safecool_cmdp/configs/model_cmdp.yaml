@@ -1,0 +1,27 @@
+model:
+  world_model:
+    obs_dim: 7                      # fan_speed, coolant_supply, inlet, outlet, cpu_load, ambient, power_kw
+    action_dim: 2
+    hidden_dim: 64
+    num_layers: 2
+    dropout: 0.0
+  agent:
+    hidden_dim: 64
+    num_layers: 2
+    # Discretize the 2-D action into a small grid for stable tabular-ish CQL; enables clean FQE too.
+    action_grid:
+      coolant_supply_delta_c: [-1.0, -0.5, 0.0, 0.5, 1.0]
+      fan_speed_delta_pct: [-10.0, -5.0, 0.0, 5.0, 10.0]
+
+shield:
+  enabled: true
+  use_world_model_lookahead: true
+  forecast_steps: 1
+  rate_limit_safety_margin_c: 0.2   # margin below max inlet temp that trips the shield
+  # If the shield fires this many times in a row, the deploy loop falls back to the conservative policy.
+  consecutive_fire_rollback: 3
+
+buffer:
+  n_episodes_per_policy: 12
+  policies: ["rule_based", "conservative", "perturbed_safe"]
+  scenarios_sampled_per_policy: 4

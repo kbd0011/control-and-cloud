@@ -1,0 +1,29 @@
+dataset:
+  name: "m100_like_demo"
+  source: "synthetic"       # "synthetic" | "parquet"
+  telemetry_path: "data/sample/telemetry.csv"
+  layout_path: "data/sample/layout.csv"
+  cadence_minutes: 5
+  n_racks: 8
+  n_cooling_units: 2
+  duration_days: 7
+  use_missingness_mask: true
+
+windowing:
+  context_steps: 24         # 2 hours of history @ 5 min
+  horizon_steps: 12         # 1 hour of forecast
+  stride: 3                 # 3 so default runs complete in a few minutes on CPU
+
+features:
+  targets: ["inlet_temp", "outlet_temp"]
+  covariates:
+    - "cpu_load"
+    - "gpu_load"
+    - "power_draw_kw"
+    - "fan_speed_pct"
+    - "coolant_supply_temp"
+    - "ambient_temp"
+  controls:
+    - "fan_speed_pct"
+    - "coolant_supply_temp"
+  hotspot_target: "inlet_temp"

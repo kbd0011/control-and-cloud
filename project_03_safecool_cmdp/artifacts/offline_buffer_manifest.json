@@ -1,0 +1,362 @@
+[
+  {
+    "episode_id": 0,
+    "policy": "rule_based",
+    "scenario_family": "nominal",
+    "scenario_seed": 191664963,
+    "n_steps": 96,
+    "mean_reward": -0.2788650691509247,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.761322021484375
+  },
+  {
+    "episode_id": 1,
+    "policy": "rule_based",
+    "scenario_family": "spike",
+    "scenario_seed": 1662057957,
+    "n_steps": 96,
+    "mean_reward": -0.32316651940345764,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.80805015563965
+  },
+  {
+    "episode_id": 2,
+    "policy": "rule_based",
+    "scenario_family": "degradation",
+    "scenario_seed": 1405681631,
+    "n_steps": 96,
+    "mean_reward": -0.3173368275165558,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.73873519897461
+  },
+  {
+    "episode_id": 3,
+    "policy": "rule_based",
+    "scenario_family": "heatwave",
+    "scenario_seed": 942484272,
+    "n_steps": 96,
+    "mean_reward": -0.3084588944911957,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.914100646972656
+  },
+  {
+    "episode_id": 4,
+    "policy": "rule_based",
+    "scenario_family": "nominal",
+    "scenario_seed": 929893137,
+    "n_steps": 96,
+    "mean_reward": -0.30234789848327637,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.720224380493164
+  },
+  {
+    "episode_id": 5,
+    "policy": "rule_based",
+    "scenario_family": "spike",
+    "scenario_seed": 1843824992,
+    "n_steps": 96,
+    "mean_reward": -0.3407886028289795,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.9002742767334
+  },
+  {
+    "episode_id": 6,
+    "policy": "rule_based",
+    "scenario_family": "degradation",
+    "scenario_seed": 184566854,
+    "n_steps": 96,
+    "mean_reward": -0.5533816814422607,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.753873825073242
+  },
+  {
+    "episode_id": 7,
+    "policy": "rule_based",
+    "scenario_family": "heatwave",
+    "scenario_seed": 1497586438,
+    "n_steps": 96,
+    "mean_reward": -0.343816876411438,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.815059661865234
+  },
+  {
+    "episode_id": 8,
+    "policy": "rule_based",
+    "scenario_family": "nominal",
+    "scenario_seed": 432652533,
+    "n_steps": 96,
+    "mean_reward": -0.27249014377593994,
+    "sum_cost": 0.0,
+    "max_inlet_c": 25.068937301635742
+  },
+  {
+    "episode_id": 9,
+    "policy": "rule_based",
+    "scenario_family": "spike",
+    "scenario_seed": 202244314,
+    "n_steps": 96,
+    "mean_reward": -0.30377963185310364,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.692792892456055
+  },
+  {
+    "episode_id": 10,
+    "policy": "rule_based",
+    "scenario_family": "degradation",
+    "scenario_seed": 1130604997,
+    "n_steps": 96,
+    "mean_reward": -0.2916736304759979,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.922138214111328
+  },
+  {
+    "episode_id": 11,
+    "policy": "rule_based",
+    "scenario_family": "heatwave",
+    "scenario_seed": 2095133045,
+    "n_steps": 96,
+    "mean_reward": -0.265553742647171,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.496408462524414
+  },
+  {
+    "episode_id": 12,
+    "policy": "conservative",
+    "scenario_family": "nominal",
+    "scenario_seed": 1580016183,
+    "n_steps": 96,
+    "mean_reward": -0.7471434473991394,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.55859375
+  },
+  {
+    "episode_id": 13,
+    "policy": "conservative",
+    "scenario_family": "spike",
+    "scenario_seed": 1634535062,
+    "n_steps": 96,
+    "mean_reward": -0.7650024890899658,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.45751190185547
+  },
+  {
+    "episode_id": 14,
+    "policy": "conservative",
+    "scenario_family": "degradation",
+    "scenario_seed": 1540770719,
+    "n_steps": 96,
+    "mean_reward": -0.7541766166687012,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.507305145263672
+  },
+  {
+    "episode_id": 15,
+    "policy": "conservative",
+    "scenario_family": "heatwave",
+    "scenario_seed": 1688060240,
+    "n_steps": 96,
+    "mean_reward": -0.764240562915802,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.75909423828125
+  },
+  {
+    "episode_id": 16,
+    "policy": "conservative",
+    "scenario_family": "nominal",
+    "scenario_seed": 1102145672,
+    "n_steps": 96,
+    "mean_reward": -0.7474120259284973,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.351604461669922
+  },
+  {
+    "episode_id": 17,
+    "policy": "conservative",
+    "scenario_family": "spike",
+    "scenario_seed": 275121930,
+    "n_steps": 96,
+    "mean_reward": -0.7637458443641663,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.417888641357422
+  },
+  {
+    "episode_id": 18,
+    "policy": "conservative",
+    "scenario_family": "degradation",
+    "scenario_seed": 1803345590,
+    "n_steps": 96,
+    "mean_reward": -0.7517287731170654,
+    "sum_cost": 0.0,
+    "max_inlet_c": 22.028562545776367
+  },
+  {
+    "episode_id": 19,
+    "policy": "conservative",
+    "scenario_family": "heatwave",
+    "scenario_seed": 967196436,
+    "n_steps": 96,
+    "mean_reward": -0.7562739849090576,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.591094970703125
+  },
+  {
+    "episode_id": 20,
+    "policy": "conservative",
+    "scenario_family": "nominal",
+    "scenario_seed": 1074497555,
+    "n_steps": 96,
+    "mean_reward": -0.7410915493965149,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.37074851989746
+  },
+  {
+    "episode_id": 21,
+    "policy": "conservative",
+    "scenario_family": "spike",
+    "scenario_seed": 796282693,
+    "n_steps": 96,
+    "mean_reward": -0.7840901017189026,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.54487419128418
+  },
+  {
+    "episode_id": 22,
+    "policy": "conservative",
+    "scenario_family": "degradation",
+    "scenario_seed": 392022359,
+    "n_steps": 96,
+    "mean_reward": -0.7452515959739685,
+    "sum_cost": 0.0,
+    "max_inlet_c": 22.100643157958984
+  },
+  {
+    "episode_id": 23,
+    "policy": "conservative",
+    "scenario_family": "heatwave",
+    "scenario_seed": 1990212658,
+    "n_steps": 96,
+    "mean_reward": -0.7504045367240906,
+    "sum_cost": 0.0,
+    "max_inlet_c": 21.4707088470459
+  },
+  {
+    "episode_id": 24,
+    "policy": "perturbed_safe",
+    "scenario_family": "nominal",
+    "scenario_seed": 1678403330,
+    "n_steps": 96,
+    "mean_reward": -0.3300342559814453,
+    "sum_cost": 0.3982062339782715,
+    "max_inlet_c": 24.39736557006836
+  },
+  {
+    "episode_id": 25,
+    "policy": "perturbed_safe",
+    "scenario_family": "spike",
+    "scenario_seed": 1382689815,
+    "n_steps": 96,
+    "mean_reward": -0.2973944842815399,
+    "sum_cost": 0.44982361793518066,
+    "max_inlet_c": 24.44500160217285
+  },
+  {
+    "episode_id": 26,
+    "policy": "perturbed_safe",
+    "scenario_family": "degradation",
+    "scenario_seed": 864178266,
+    "n_steps": 96,
+    "mean_reward": -0.3130131661891937,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.337003707885742
+  },
+  {
+    "episode_id": 27,
+    "policy": "perturbed_safe",
+    "scenario_family": "heatwave",
+    "scenario_seed": 1766867109,
+    "n_steps": 96,
+    "mean_reward": -0.33902499079704285,
+    "sum_cost": 0.23255610466003418,
+    "max_inlet_c": 25.167659759521484
+  },
+  {
+    "episode_id": 28,
+    "policy": "perturbed_safe",
+    "scenario_family": "nominal",
+    "scenario_seed": 1171300112,
+    "n_steps": 96,
+    "mean_reward": -0.31974586844444275,
+    "sum_cost": 0.84424889087677,
+    "max_inlet_c": 24.221385955810547
+  },
+  {
+    "episode_id": 29,
+    "policy": "perturbed_safe",
+    "scenario_family": "spike",
+    "scenario_seed": 952224740,
+    "n_steps": 96,
+    "mean_reward": -0.31236815452575684,
+    "sum_cost": 0.09731519222259521,
+    "max_inlet_c": 24.530929565429688
+  },
+  {
+    "episode_id": 30,
+    "policy": "perturbed_safe",
+    "scenario_family": "degradation",
+    "scenario_seed": 967354524,
+    "n_steps": 96,
+    "mean_reward": -0.4738422930240631,
+    "sum_cost": 0.0,
+    "max_inlet_c": 24.80256462097168
+  },
+  {
+    "episode_id": 31,
+    "policy": "perturbed_safe",
+    "scenario_family": "heatwave",
+    "scenario_seed": 487991438,
+    "n_steps": 96,
+    "mean_reward": -0.45993557572364807,
+    "sum_cost": 0.25692975521087646,
+    "max_inlet_c": 24.342273712158203
+  },
+  {
+    "episode_id": 32,
+    "policy": "perturbed_safe",
+    "scenario_family": "nominal",
+    "scenario_seed": 197860368,
+    "n_steps": 96,
+    "mean_reward": -0.2911200225353241,
+    "sum_cost": 0.0989537239074707,
+    "max_inlet_c": 24.34775733947754
+  },
+  {
+    "episode_id": 33,
+    "policy": "perturbed_safe",
+    "scenario_family": "spike",
+    "scenario_seed": 1190961760,
+    "n_steps": 96,
+    "mean_reward": -0.40022531151771545,
+    "sum_cost": 2.868769645690918,
+    "max_inlet_c": 24.29706382751465
+  },
+  {
+    "episode_id": 34,
+    "policy": "perturbed_safe",
+    "scenario_family": "degradation",
+    "scenario_seed": 1906728918,
+    "n_steps": 96,
+    "mean_reward": -0.6382256150245667,
+    "sum_cost": 0.01169276237487793,
+    "max_inlet_c": 24.449251174926758
+  },
+  {
+    "episode_id": 35,
+    "policy": "perturbed_safe",
+    "scenario_family": "heatwave",
+    "scenario_seed": 137046513,
+    "n_steps": 96,
+    "mean_reward": -0.45792946219444275,
+    "sum_cost": 1.2656517028808594,
+    "max_inlet_c": 24.52220916748047
+  }
+]

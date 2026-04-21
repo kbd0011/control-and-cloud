@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudsentinel"
+version = "0.1.0"
+description = "CloudSentinel-GRCA: Graph Root-Cause Analysis and Anomaly Prediction for High-Dimensional Telemetry."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "CloudSentinel-GRCA" }]
+dependencies = [
+    "numpy>=1.24,<3",
+    "pandas>=2.0,<3",
+    "scipy>=1.10,<2",
+    "scikit-learn>=1.3,<2",
+    "torch>=2.1,<3",
+    "pyyaml>=6.0,<7",
+    "pydantic>=2.5,<3",
+    "fastapi>=0.110,<0.120",
+    "uvicorn>=0.27,<1",
+    "networkx>=3.1,<4",
+    "matplotlib>=3.7,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "httpx>=0.26,<1"]
+notebook = ["jupyter", "ipykernel", "nbconvert"]
+
+[project.scripts]
+cloudsentinel-generate-data = "cloudsentinel.data.synthetic:main"
+cloudsentinel-train = "cloudsentinel.train:main"
+cloudsentinel-evaluate = "cloudsentinel.evaluate:main"
+cloudsentinel-brief = "cloudsentinel.incident_brief:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,18 @@
+{
+  "n_series": 96,
+  "n_timesteps_total": 135552,
+  "positive_rate": 0.01732176581680831,
+  "default_weights": {
+    "zscore": 0.4,
+    "residual": 0.4,
+    "changepoint": 0.2
+  },
+  "logistic_coef": [
+    [
+      4.04031458259837,
+      -0.7185444738859202,
+      2.2552667022989783
+    ]
+  ],
+  "logistic_intercept": -7.218768360387861
+}

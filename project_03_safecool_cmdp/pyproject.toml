@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safecool"
+version = "0.1.0"
+description = "SafeCool-CMDP: Safety-constrained offline RL baseline for data-centre cooling control."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SafeCool-CMDP" }]
+dependencies = [
+    "numpy>=1.24,<3",
+    "pandas>=2.0,<3",
+    "scipy>=1.10,<2",
+    "scikit-learn>=1.3,<2",
+    "torch>=2.1,<3",
+    "pyyaml>=6.0,<7",
+    "pydantic>=2.5,<3",
+    "matplotlib>=3.7,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1"]
+notebook = ["jupyter", "ipykernel", "nbconvert"]
+
+[project.scripts]
+safecool-build-buffer = "safecool.data.build_offline_buffer:main"
+safecool-train = "safecool.train:main"
+safecool-evaluate = "safecool.evaluate:main"
+safecool-distill = "safecool.distill:main"
+safecool-deploy = "safecool.deploy:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,3087 @@
+{
+  "scenario_family": "heatwave",
+  "n_steps": 96,
+  "rollback_active": false,
+  "rollback_step": null,
+  "rollback_reason": null,
+  "max_inlet_c": 21.34323501586914,
+  "cvar95_inlet_c": 20.854650497436523,
+  "total_cost": 0.0,
+  "n_shield_interventions": 89,
+  "records": [
+    {
+      "step": 0,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        18.0,
+        22.0,
+        28.0,
+        0.21880047023296356,
+        21.367576599121094,
+        4.027681827545166
+      ],
+      "proposed_action": [
+        0.0,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        0.6000000238418579,
+        -4.0
+      ],
+      "reward": -0.42417523298727167,
+      "cost": 0.0,
+      "inlet_temp_c": 21.34323501586914,
+      "rci": 1.0,
+      "shield_intervened": false,
+      "shield_reason": null,
+      "rollback_active": false
+    },
+    {
+      "step": 1,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        18.0,
+        21.34323501586914,
+        21.704437255859375,
+        0.27826452255249023,
+        21.435625076293945,
+        4.2417521476745605
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        -0.5,
+        0.0
+      ],
+      "baseline_action": [
+        0.7970294952392578,
+        -5.313529968261719
+      ],
+      "reward": -0.4106531080487955,
+      "cost": 0.0,
+      "inlet_temp_c": 21.01298713684082,
+      "rci": 1.0,
+      "shield_intervened": false,
+      "shield_reason": null,
+      "rollback_active": false
+    },
+    {
+      "step": 2,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        17.5,
+        21.01298713684082,
+        21.830211639404297,
+        0.24070307612419128,
+        21.345802307128906,
+        4.106531143188477
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        -0.5,
+        0.0
+      ],
+      "baseline_action": [
+        0.8961038589477539,
+        -5.974025726318359
+      ],
+      "reward": -0.42255431042945324,
+      "cost": 0.0,
+      "inlet_temp_c": 20.682340621948242,
+      "rci": 1.0,
+      "shield_intervened": false,
+      "shield_reason": null,
+      "rollback_active": false
+    },
+    {
+      "step": 3,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        17.0,
+        20.682340621948242,
+        22.186601638793945,
+        0.2737619876861572,
+        21.4644832611084,
+        4.225543022155762
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        -0.5,
+        0.0
+      ],
+      "baseline_action": [
+        0.9952977895736694,
+        -6.635318756103516
+      ],
+      "reward": -0.4049936231382554,
+      "cost": 0.0,
+      "inlet_temp_c": 20.38003921508789,
+      "rci": 1.0,
+      "shield_intervened": false,
+      "shield_reason": null,
+      "rollback_active": false
+    },
+    {
+      "step": 4,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        16.5,
+        20.38003921508789,
+        21.798816680908203,
+        0.22498229146003723,
+        21.411020278930664,
+        4.049936294555664
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        -0.5,
+        0.0
+      ],
+      "baseline_action": [
+        1.0859882831573486,
+        -7.239921569824219
+      ],
+      "reward": -0.41388874380934143,
+      "cost": 0.0,
+      "inlet_temp_c": 19.976055145263672,
+      "rci": 1.0,
+      "shield_intervened": false,
+      "shield_reason": null,
+      "rollback_active": false
+    },
+    {
+      "step": 5,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        16.0,
+        19.976055145263672,
+        21.675472259521484,
+        0.2496909499168396,
+        21.483354568481445,
+        4.138887405395508
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        -0.5,
+        0.0
+      ],
+      "baseline_action": [
+        1.2071834802627563,
+        -8.047889709472656
+      ],
+      "reward": -0.41294705157474254,
+      "cost": 0.0,
+      "inlet_temp_c": 19.53366470336914,
+      "rci": 1.0,
+      "shield_intervened": false,
+      "shield_reason": null,
+      "rollback_active": false
+    },
+    {
+      "step": 6,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.5,
+        19.53366470336914,
+        21.47629165649414,
+        0.2470751404762268,
+        21.548025131225586,
+        4.129470348358154
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        -0.5,
+        0.0
+      ],
+      "baseline_action": [
+        1.3399006128311157,
+        -8.932670593261719
+      ],
+      "reward": -0.41878476714145324,
+      "cost": 0.0,
+      "inlet_temp_c": 19.218128204345703,
+      "rci": 1.0,
+      "shield_intervened": false,
+      "shield_reason": null,
+      "rollback_active": false
+    },
+    {
+      "step": 7,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        19.218128204345703,
+        21.472206115722656,
+        0.26329103112220764,
+        21.45990753173828,
+        4.18784761428833
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.4345614910125732,
+        -9.563743591308594
+      ],
+      "reward": -0.41070455960616714,
+      "cost": 0.0,
+      "inlet_temp_c": 18.822914123535156,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 8,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.822914123535156,
+        21.0070858001709,
+        0.24084599316120148,
+        21.71907615661621,
+        4.107045650482178
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.5531257390975952,
+        -10.354171752929688
+      ],
+      "reward": -0.42757636057235304,
+      "cost": 0.0,
+      "inlet_temp_c": 18.548095703125,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 9,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.548095703125,
+        20.919361114501953,
+        0.28771212697029114,
+        21.510337829589844,
+        4.275763511657715
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.6355712413787842,
+        -10.90380859375
+      ],
+      "reward": -0.4227330895958715,
+      "cost": 0.0,
+      "inlet_temp_c": 18.442819595336914,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 10,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.442819595336914,
+        21.153884887695312,
+        0.2742585837841034,
+        21.316715240478516,
+        4.227330684661865
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.66715407371521,
+        -11.114360809326172
+      ],
+      "reward": -0.4185707132625657,
+      "cost": 0.0,
+      "inlet_temp_c": 18.262319564819336,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 11,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.262319564819336,
+        21.011842727661133,
+        0.26269641518592834,
+        21.365331649780273,
+        4.185707092285156
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.721304178237915,
+        -11.475360870361328
+      ],
+      "reward": -0.4188681724339537,
+      "cost": 0.0,
+      "inlet_temp_c": 18.20267677307129,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 12,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.20267677307129,
+        21.00379180908203,
+        0.2635227143764496,
+        21.622953414916992,
+        4.188681602478027
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.739197015762329,
+        -11.594646453857422
+      ],
+      "reward": -0.4236943233232694,
+      "cost": 0.0,
+      "inlet_temp_c": 17.83111572265625,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 13,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.83111572265625,
+        20.662837982177734,
+        0.2769286632537842,
+        21.564987182617188,
+        4.236943244934082
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8506653308868408,
+        -12.3377685546875
+      ],
+      "reward": -0.4104324987850996,
+      "cost": 0.0,
+      "inlet_temp_c": 17.696727752685547,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 14,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.696727752685547,
+        20.80087661743164,
+        0.2400902807712555,
+        21.48272705078125,
+        4.104324817657471
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.890981674194336,
+        -12.606544494628906
+      ],
+      "reward": -0.42827843690594036,
+      "cost": 0.0,
+      "inlet_temp_c": 17.372943878173828,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 15,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.372943878173828,
+        20.301958084106445,
+        0.28966233134269714,
+        21.45734214782715,
+        4.282784461975098
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9881168603897095,
+        -13.254112243652344
+      ],
+      "reward": -0.42467333248209477,
+      "cost": 0.0,
+      "inlet_temp_c": 17.466999053955078,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 16,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.466999053955078,
+        20.62800407409668,
+        0.27964815497398376,
+        21.647817611694336,
+        4.24673318862915
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9599002599716187,
+        -13.066001892089844
+      ],
+      "reward": -0.4139020340508612,
+      "cost": 0.0,
+      "inlet_temp_c": 17.56643295288086,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 17,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.56643295288086,
+        20.572195053100586,
+        0.24972787499427795,
+        21.609519958496094,
+        4.1390204429626465
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.930070161819458,
+        -12.867134094238281
+      ],
+      "reward": -0.40724117174794977,
+      "cost": 0.0,
+      "inlet_temp_c": 17.380220413208008,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 18,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.380220413208008,
+        20.445960998535156,
+        0.23122547566890717,
+        21.511117935180664,
+        4.07241153717041
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9859338998794556,
+        -13.239559173583984
+      ],
+      "reward": -0.42755481532733175,
+      "cost": 0.0,
+      "inlet_temp_c": 17.305261611938477,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 19,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.305261611938477,
+        20.39698600769043,
+        0.28765225410461426,
+        21.766674041748047,
+        4.275547981262207
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0084214210510254,
+        -13.389476776123047
+      ],
+      "reward": -0.41740489670438263,
+      "cost": 0.0,
+      "inlet_temp_c": 17.378337860107422,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 20,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.378337860107422,
+        20.354583740234375,
+        0.2594580352306366,
+        21.88416862487793,
+        4.174048900604248
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9864985942840576,
+        -13.243324279785156
+      ],
+      "reward": -0.4173023933544645,
+      "cost": 0.0,
+      "inlet_temp_c": 17.188814163208008,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 21,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.188814163208008,
+        20.34315299987793,
+        0.25917330384254456,
+        21.78304672241211,
+        4.173023700714111
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.043355703353882,
+        -13.622371673583984
+      ],
+      "reward": -0.4222701564934271,
+      "cost": 0.0,
+      "inlet_temp_c": 17.283199310302734,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 22,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.283199310302734,
+        20.4638671875,
+        0.27297264337539673,
+        21.816404342651367,
+        4.222701549530029
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.015040159225464,
+        -13.433601379394531
+      ],
+      "reward": -0.42181203035635767,
+      "cost": 0.0,
+      "inlet_temp_c": 17.231788635253906,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 23,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.231788635253906,
+        20.35797119140625,
+        0.27170008420944214,
+        22.038042068481445,
+        4.218120098114014
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.030463457107544,
+        -13.536422729492188
+      ],
+      "reward": -0.40801735622535107,
+      "cost": 0.0,
+      "inlet_temp_c": 17.046552658081055,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 24,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.046552658081055,
+        19.978845596313477,
+        0.23338153958320618,
+        21.7386417388916,
+        4.080173492431641
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0860342979431152,
+        -13.90689468383789
+      ],
+      "reward": -0.4146671715136592,
+      "cost": 0.0,
+      "inlet_temp_c": 17.0430850982666,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 25,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.0430850982666,
+        20.30990982055664,
+        0.25185325741767883,
+        22.107275009155273,
+        4.146671772003174
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0870745182037354,
+        -13.913829803466797
+      ],
+      "reward": -0.4332409840409167,
+      "cost": 0.0,
+      "inlet_temp_c": 16.955480575561523,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 26,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        16.955480575561523,
+        20.091508865356445,
+        0.3034471869468689,
+        22.051471710205078,
+        4.332409858703613
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.113355875015259,
+        -14.089038848876953
+      ],
+      "reward": -0.42247263069449065,
+      "cost": 0.0,
+      "inlet_temp_c": 17.147830963134766,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 27,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.147830963134766,
+        20.074840545654297,
+        0.2735350728034973,
+        22.022016525268555,
+        4.22472620010376
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0556507110595703,
+        -13.704338073730469
+      ],
+      "reward": -0.4295885973163812,
+      "cost": 0.0,
+      "inlet_temp_c": 17.099685668945312,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 28,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.099685668945312,
+        20.124469757080078,
+        0.29330167174339294,
+        22.291271209716797,
+        4.295886039733887
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.070094347000122,
+        -13.800628662109375
+      ],
+      "reward": -0.42221746723485226,
+      "cost": 0.0,
+      "inlet_temp_c": 17.18381690979004,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 29,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.18381690979004,
+        20.434158325195312,
+        0.27282628417015076,
+        22.300464630126953,
+        4.222174644470215
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0448548793792725,
+        -13.632366180419922
+      ],
+      "reward": -0.4262935187223224,
+      "cost": 0.0,
+      "inlet_temp_c": 17.072874069213867,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 30,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.072874069213867,
+        20.37394905090332,
+        0.2841486632823944,
+        22.595367431640625,
+        4.262935161590576
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0781378746032715,
+        -13.854251861572266
+      ],
+      "reward": -0.4445275430299092,
+      "cost": 0.0,
+      "inlet_temp_c": 17.255714416503906,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 31,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.255714416503906,
+        20.70732879638672,
+        0.3347987234592438,
+        22.4554443359375,
+        4.44527530670166
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0232856273651123,
+        -13.488571166992188
+      ],
+      "reward": -0.41800615910874683,
+      "cost": 0.0,
+      "inlet_temp_c": 17.19324493408203,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 32,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.19324493408203,
+        20.40825080871582,
+        0.2611282169818878,
+        22.71114158630371,
+        4.1800618171691895
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0420265197753906,
+        -13.613510131835938
+      ],
+      "reward": -0.41699932346790547,
+      "cost": 0.0,
+      "inlet_temp_c": 17.327247619628906,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 33,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.327247619628906,
+        20.605571746826172,
+        0.25833144783973694,
+        22.50419807434082,
+        4.1699934005737305
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0018258094787598,
+        -13.345504760742188
+      ],
+      "reward": -0.4219477776726296,
+      "cost": 0.0,
+      "inlet_temp_c": 17.388439178466797,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 34,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.388439178466797,
+        20.81802749633789,
+        0.27207717299461365,
+        22.414859771728516,
+        4.219477653503418
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9834682941436768,
+        -13.223121643066406
+      ],
+      "reward": -0.4654595093645767,
+      "cost": 0.0,
+      "inlet_temp_c": 17.469432830810547,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 35,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.469432830810547,
+        20.860111236572266,
+        0.3929430842399597,
+        23.009557723999023,
+        4.654594898223877
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9591701030731201,
+        -13.061134338378906
+      ],
+      "reward": -0.437979595547882,
+      "cost": 0.0,
+      "inlet_temp_c": 17.339250564575195,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 36,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.339250564575195,
+        20.859424591064453,
+        0.3166099786758423,
+        22.466527938842773,
+        4.379796028137207
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9982248544692993,
+        -13.32149887084961
+      ],
+      "reward": -0.43469051841037964,
+      "cost": 0.0,
+      "inlet_temp_c": 17.520252227783203,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 37,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.520252227783203,
+        21.144155502319336,
+        0.30747365951538086,
+        22.77248764038086,
+        4.34690523147583
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9439243078231812,
+        -12.959495544433594
+      ],
+      "reward": -0.4261724445211537,
+      "cost": 0.0,
+      "inlet_temp_c": 17.2636775970459,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 38,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.2636775970459,
+        20.758644104003906,
+        0.28381234407424927,
+        22.920122146606445,
+        4.261724472045898
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0208966732025146,
+        -13.472644805908203
+      ],
+      "reward": -0.4576207443794578,
+      "cost": 0.0,
+      "inlet_temp_c": 17.32303237915039,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 39,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.32303237915039,
+        21.1860408782959,
+        0.37116873264312744,
+        23.017070770263672,
+        4.576207637786865
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0030903816223145,
+        -13.353935241699219
+      ],
+      "reward": -0.4269218994252653,
+      "cost": 0.0,
+      "inlet_temp_c": 17.208585739135742,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 40,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.208585739135742,
+        20.767921447753906,
+        0.28589415550231934,
+        23.033035278320312,
+        4.269218921661377
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.037424325942993,
+        -13.582828521728516
+      ],
+      "reward": -0.43206253386712434,
+      "cost": 0.0,
+      "inlet_temp_c": 17.395715713500977,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 41,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.395715713500977,
+        20.917390823364258,
+        0.30017369985580444,
+        23.511520385742188,
+        4.320625305175781
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9812853336334229,
+        -13.208568572998047
+      ],
+      "reward": -0.4463266475453154,
+      "cost": 0.0,
+      "inlet_temp_c": 17.40004539489746,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 42,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.40004539489746,
+        21.121118545532227,
+        0.339796245098114,
+        23.417797088623047,
+        4.463266372680664
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9799864292144775,
+        -13.199909210205078
+      ],
+      "reward": -0.44824328509382855,
+      "cost": 0.0,
+      "inlet_temp_c": 17.355134963989258,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 43,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.355134963989258,
+        20.9675235748291,
+        0.34512025117874146,
+        23.267101287841797,
+        4.482432842254639
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9934594631195068,
+        -13.289730072021484
+      ],
+      "reward": -0.44656644609412355,
+      "cost": 0.0,
+      "inlet_temp_c": 17.62270164489746,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 44,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.62270164489746,
+        21.49114990234375,
+        0.3404623568058014,
+        23.26229476928711,
+        4.465664386749268
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9131895303726196,
+        -12.754596710205078
+      ],
+      "reward": -0.44908586553029617,
+      "cost": 0.0,
+      "inlet_temp_c": 17.81130599975586,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 45,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.81130599975586,
+        21.742843627929688,
+        0.3474607467651367,
+        23.526220321655273,
+        4.490858554840088
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8566081523895264,
+        -12.377388000488281
+      ],
+      "reward": -0.45926234626767554,
+      "cost": 0.0,
+      "inlet_temp_c": 17.83807945251465,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 46,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.83807945251465,
+        22.068758010864258,
+        0.3757287263870239,
+        23.57373046875,
+        4.592623233795166
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8485761880874634,
+        -12.323841094970703
+      ],
+      "reward": -0.43542405986986105,
+      "cost": 0.0,
+      "inlet_temp_c": 17.59539794921875,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 47,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.59539794921875,
+        21.795656204223633,
+        0.30951127409935,
+        23.7554874420166,
+        4.354240417480469
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.921380639076233,
+        -12.8092041015625
+      ],
+      "reward": -0.4480611924965479,
+      "cost": 0.0,
+      "inlet_temp_c": 17.549030303955078,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 48,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.549030303955078,
+        21.751325607299805,
+        0.3446144163608551,
+        24.08041763305664,
+        4.480611801147461
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9352909326553345,
+        -12.901939392089844
+      ],
+      "reward": -0.44170575683308116,
+      "cost": 0.0,
+      "inlet_temp_c": 17.656129837036133,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 49,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.656129837036133,
+        21.570091247558594,
+        0.3269604444503784,
+        23.75086784362793,
+        4.417057514190674
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9031610488891602,
+        -12.687740325927734
+      ],
+      "reward": -0.4509889165430129,
+      "cost": 0.0,
+      "inlet_temp_c": 17.706052780151367,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 50,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.706052780151367,
+        21.933629989624023,
+        0.35274699330329895,
+        24.012357711791992,
+        4.509889125823975
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8881841897964478,
+        -12.587894439697266
+      ],
+      "reward": -0.46110975327162196,
+      "cost": 0.0,
+      "inlet_temp_c": 17.392284393310547,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 51,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.392284393310547,
+        21.493741989135742,
+        0.38086041808128357,
+        24.124011993408203,
+        4.61109733581543
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9823147058486938,
+        -13.215431213378906
+      ],
+      "reward": -0.4424083041020944,
+      "cost": 0.0,
+      "inlet_temp_c": 17.305570602416992,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 52,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.305570602416992,
+        21.337247848510742,
+        0.3289119601249695,
+        24.082292556762695,
+        4.424083232879639
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.008328914642334,
+        -13.388858795166016
+      ],
+      "reward": -0.4426771969785836,
+      "cost": 0.0,
+      "inlet_temp_c": 17.378707885742188,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 53,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.378707885742188,
+        21.366897583007812,
+        0.3296588659286499,
+        24.445520401000977,
+        4.426772117614746
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9863876104354858,
+        -13.242584228515625
+      ],
+      "reward": -0.46927657738300327,
+      "cost": 0.0,
+      "inlet_temp_c": 17.513622283935547,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 54,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.513622283935547,
+        21.905336380004883,
+        0.4035460352897644,
+        24.35930061340332,
+        4.692765712738037
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.945913314819336,
+        -12.972755432128906
+      ],
+      "reward": -0.45238828103752987,
+      "cost": 0.0,
+      "inlet_temp_c": 17.514936447143555,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 55,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.514936447143555,
+        21.757165908813477,
+        0.35663411021232605,
+        24.486501693725586,
+        4.523882865905762
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9455190896987915,
+        -12.97012710571289
+      ],
+      "reward": -0.4496631585004315,
+      "cost": 0.0,
+      "inlet_temp_c": 17.56697654724121,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 56,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.56697654724121,
+        21.804218292236328,
+        0.34906432032585144,
+        24.638254165649414,
+        4.496631622314453
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9299070835113525,
+        -12.866046905517578
+      ],
+      "reward": -0.48312628030001437,
+      "cost": 0.0,
+      "inlet_temp_c": 17.480134963989258,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 57,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.480134963989258,
+        21.82356834411621,
+        0.44201743602752686,
+        25.09229278564453,
+        4.831262588500977
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9559595584869385,
+        -13.039730072021484
+      ],
+      "reward": -0.45796954668488665,
+      "cost": 0.0,
+      "inlet_temp_c": 17.570756912231445,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 58,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.570756912231445,
+        22.1513614654541,
+        0.3721376359462738,
+        24.59882354736328,
+        4.579695701599121
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.9287729263305664,
+        -12.85848617553711
+      ],
+      "reward": -0.4587875294370364,
+      "cost": 0.0,
+      "inlet_temp_c": 17.282203674316406,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 59,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.282203674316406,
+        21.67306137084961,
+        0.3744097948074341,
+        24.8133602142334,
+        4.5878753662109375
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.015338897705078,
+        -13.435592651367188
+      ],
+      "reward": -0.4616470829370649,
+      "cost": 0.0,
+      "inlet_temp_c": 17.233684539794922,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 60,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.233684539794922,
+        21.663633346557617,
+        0.3823530077934265,
+        24.868410110473633,
+        4.616470813751221
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        2.0298945903778076,
+        -13.532630920410156
+      ],
+      "reward": -0.45304252710229287,
+      "cost": 0.0,
+      "inlet_temp_c": 17.644201278686523,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 61,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.644201278686523,
+        21.871397018432617,
+        0.3584514558315277,
+        24.869779586791992,
+        4.530425071716309
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.906739592552185,
+        -12.711597442626953
+      ],
+      "reward": -0.49025501390232673,
+      "cost": 0.0,
+      "inlet_temp_c": 18.107807159423828,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 62,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.107807159423828,
+        22.539302825927734,
+        0.46181946992874146,
+        25.075151443481445,
+        4.902550220489502
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7676578760147095,
+        -11.784385681152344
+      ],
+      "reward": -0.47564229676499625,
+      "cost": 0.0,
+      "inlet_temp_c": 18.323089599609375,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 63,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.323089599609375,
+        22.856876373291016,
+        0.4212285876274109,
+        25.291179656982422,
+        4.756422996520996
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7030731439590454,
+        -11.35382080078125
+      ],
+      "reward": -0.4818925770294478,
+      "cost": 0.0,
+      "inlet_temp_c": 18.311542510986328,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 64,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.311542510986328,
+        23.0338134765625,
+        0.43859049677848816,
+        25.41683578491211,
+        4.818925857543945
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7065372467041016,
+        -11.376914978027344
+      ],
+      "reward": -0.4601982414639302,
+      "cost": 0.0,
+      "inlet_temp_c": 18.20408821105957,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 65,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.20408821105957,
+        22.903032302856445,
+        0.37832844257354736,
+        25.54117774963379,
+        4.601982593536377
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7387735843658447,
+        -11.59182357788086
+      ],
+      "reward": -0.4706045801969109,
+      "cost": 0.0,
+      "inlet_temp_c": 18.225072860717773,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 66,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.225072860717773,
+        23.140535354614258,
+        0.40723493695259094,
+        25.704063415527344,
+        4.706045627593994
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.732478141784668,
+        -11.549854278564453
+      ],
+      "reward": -0.4819605542213699,
+      "cost": 0.0,
+      "inlet_temp_c": 18.182220458984375,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 67,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.182220458984375,
+        23.029420852661133,
+        0.4387793242931366,
+        25.80084800720215,
+        4.819605350494385
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7453339099884033,
+        -11.63555908203125
+      ],
+      "reward": -0.4831429245482403,
+      "cost": 0.0,
+      "inlet_temp_c": 18.123369216918945,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 68,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.123369216918945,
+        23.360794067382812,
+        0.44206368923187256,
+        25.777854919433594,
+        4.831429481506348
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7629892826080322,
+        -11.75326156616211
+      ],
+      "reward": -0.48545811746303996,
+      "cost": 0.0,
+      "inlet_temp_c": 17.985788345336914,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 69,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.985788345336914,
+        22.81879234313965,
+        0.4484947621822357,
+        26.23085594177246,
+        4.854581356048584
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8042634725570679,
+        -12.028423309326172
+      ],
+      "reward": -0.4856970957412849,
+      "cost": 0.0,
+      "inlet_temp_c": 18.05890655517578,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 70,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.05890655517578,
+        22.862089157104492,
+        0.44915860891342163,
+        26.282442092895508,
+        4.85697078704834
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7823280096054077,
+        -11.882186889648438
+      ],
+      "reward": -0.4893370679302267,
+      "cost": 0.0,
+      "inlet_temp_c": 17.88298797607422,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 71,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.88298797607422,
+        22.95152473449707,
+        0.459269642829895,
+        26.351909637451172,
+        4.893370628356934
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8351036310195923,
+        -12.234024047851562
+      ],
+      "reward": -0.4865666414222474,
+      "cost": 0.0,
+      "inlet_temp_c": 17.85936737060547,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 72,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.85936737060547,
+        23.029712677001953,
+        0.4515739977359772,
+        26.361425399780273,
+        4.865666389465332
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8421897888183594,
+        -12.281265258789062
+      ],
+      "reward": -0.48921834685319504,
+      "cost": 0.0,
+      "inlet_temp_c": 18.105026245117188,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 73,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.105026245117188,
+        22.95946502685547,
+        0.4589398503303528,
+        26.393146514892578,
+        4.892183303833008
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7684921026229858,
+        -11.789947509765625
+      ],
+      "reward": -0.49104693004112665,
+      "cost": 0.0,
+      "inlet_temp_c": 18.136198043823242,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 74,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.136198043823242,
+        23.37464714050293,
+        0.464019238948822,
+        26.504438400268555,
+        4.9104695320129395
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7591406106948853,
+        -11.727603912353516
+      ],
+      "reward": -0.4942513765286827,
+      "cost": 0.0,
+      "inlet_temp_c": 18.3739013671875,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 75,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.3739013671875,
+        23.50152587890625,
+        0.4729204773902893,
+        26.3853759765625,
+        4.942513942718506
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.687829613685608,
+        -11.252197265625
+      ],
+      "reward": -0.4887271410681041,
+      "cost": 0.0,
+      "inlet_temp_c": 18.316232681274414,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 76,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.316232681274414,
+        23.5382022857666,
+        0.45757538080215454,
+        26.88722038269043,
+        4.887271404266357
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7051302194595337,
+        -11.367534637451172
+      ],
+      "reward": -0.5078788966120902,
+      "cost": 0.0,
+      "inlet_temp_c": 18.362993240356445,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 77,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.362993240356445,
+        24.127643585205078,
+        0.5107747316360474,
+        26.8160343170166,
+        5.078788757324219
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.6911020278930664,
+        -11.27401351928711
+      ],
+      "reward": -0.5001400219722831,
+      "cost": 0.0,
+      "inlet_temp_c": 18.584529876708984,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 78,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.584529876708984,
+        24.216270446777344,
+        0.48927783966064453,
+        27.151111602783203,
+        5.001399993896484
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.6246410608291626,
+        -10.830940246582031
+      ],
+      "reward": -0.4937499175074992,
+      "cost": 0.0,
+      "inlet_temp_c": 18.518922805786133,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 79,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.518922805786133,
+        23.995607376098633,
+        0.4715275466442108,
+        27.206684112548828,
+        4.937499046325684
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.6443231105804443,
+        -10.962154388427734
+      ],
+      "reward": -0.4857769896623784,
+      "cost": 0.0,
+      "inlet_temp_c": 18.574918746948242,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 80,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.574918746948242,
+        24.09616470336914,
+        0.4493805170059204,
+        27.338546752929688,
+        4.857769966125488
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.6275243759155273,
+        -10.850162506103516
+      ],
+      "reward": -0.5081558882634589,
+      "cost": 0.0,
+      "inlet_temp_c": 18.78068733215332,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 81,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.78068733215332,
+        24.53826141357422,
+        0.5115441083908081,
+        27.473007202148438,
+        5.081558704376221
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.565793752670288,
+        -10.43862533569336
+      ],
+      "reward": -0.5008605579362428,
+      "cost": 0.0,
+      "inlet_temp_c": 18.49564552307129,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 82,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.49564552307129,
+        24.107093811035156,
+        0.49127933382987976,
+        27.16826057434082,
+        5.008605480194092
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.651306390762329,
+        -11.008708953857422
+      ],
+      "reward": -0.5099987494051795,
+      "cost": 0.0,
+      "inlet_temp_c": 18.343290328979492,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 83,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.343290328979492,
+        23.965551376342773,
+        0.5166631937026978,
+        27.736982345581055,
+        5.099987506866455
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.6970129013061523,
+        -11.313419342041016
+      ],
+      "reward": -0.49149612163406536,
+      "cost": 0.0,
+      "inlet_temp_c": 18.217592239379883,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 84,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.217592239379883,
+        24.006858825683594,
+        0.46526700258255005,
+        27.620880126953125,
+        4.914961338043213
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.734722375869751,
+        -11.564815521240234
+      ],
+      "reward": -0.5127223129102554,
+      "cost": 0.0,
+      "inlet_temp_c": 17.876659393310547,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 85,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.876659393310547,
+        23.75615882873535,
+        0.5242286324501038,
+        27.894309997558594,
+        5.127223014831543
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.837002158164978,
+        -12.246681213378906
+      ],
+      "reward": -0.5121208326463328,
+      "cost": 0.0,
+      "inlet_temp_c": 18.17721939086914,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 86,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.17721939086914,
+        23.77438735961914,
+        0.5225578546524048,
+        27.83620262145996,
+        5.121208190917969
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7468341588974,
+        -11.645561218261719
+      ],
+      "reward": -0.5155254297879959,
+      "cost": 0.0,
+      "inlet_temp_c": 17.9481201171875,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 87,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.9481201171875,
+        24.15575408935547,
+        0.5320150852203369,
+        27.84040069580078,
+        5.155254364013672
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8155639171600342,
+        -12.103759765625
+      ],
+      "reward": -0.5197685573665568,
+      "cost": 0.0,
+      "inlet_temp_c": 17.91497230529785,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 88,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        17.91497230529785,
+        24.113174438476562,
+        0.5438015460968018,
+        28.087223052978516,
+        5.197685718536377
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.8255083560943604,
+        -12.170055389404297
+      ],
+      "reward": -0.5146106213739079,
+      "cost": 0.0,
+      "inlet_temp_c": 18.013328552246094,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 89,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.013328552246094,
+        24.1762752532959,
+        0.5294739603996277,
+        28.294328689575195,
+        5.146106243133545
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7960014343261719,
+        -11.973342895507812
+      ],
+      "reward": -0.5119598973836906,
+      "cost": 0.0,
+      "inlet_temp_c": 18.03253936767578,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 90,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.03253936767578,
+        24.23626708984375,
+        0.5221108198165894,
+        28.105783462524414,
+        5.119598865509033
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7902381420135498,
+        -11.934921264648438
+      ],
+      "reward": -0.5035655719844623,
+      "cost": 0.0,
+      "inlet_temp_c": 18.062170028686523,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 91,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.062170028686523,
+        24.403823852539062,
+        0.49879324436187744,
+        28.48557472229004,
+        5.035655498504639
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7813489437103271,
+        -11.875659942626953
+      ],
+      "reward": -0.507548214658595,
+      "cost": 0.0,
+      "inlet_temp_c": 18.131906509399414,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 92,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.131906509399414,
+        24.377805709838867,
+        0.5098561644554138,
+        28.323421478271484,
+        5.075482368469238
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7604280710220337,
+        -11.736186981201172
+      ],
+      "reward": -0.5321975600724876,
+      "cost": 0.0,
+      "inlet_temp_c": 18.29348373413086,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 93,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.29348373413086,
+        24.675777435302734,
+        0.5783265829086304,
+        28.535024642944336,
+        5.3219757080078125
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7119548320770264,
+        -11.413032531738281
+      ],
+      "reward": -0.5443845536366602,
+      "cost": 0.0,
+      "inlet_temp_c": 18.273303985595703,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 94,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.273303985595703,
+        24.410484313964844,
+        0.6121793389320374,
+        28.713727951049805,
+        5.443845748901367
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7180087566375732,
+        -11.453392028808594
+      ],
+      "reward": -0.5156880375078622,
+      "cost": 0.0,
+      "inlet_temp_c": 18.30978775024414,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    },
+    {
+      "step": 95,
+      "scenario_family": "heatwave",
+      "state": [
+        60.0,
+        15.0,
+        18.30978775024414,
+        24.935911178588867,
+        0.5324667692184448,
+        28.967451095581055,
+        5.1568803787231445
+      ],
+      "proposed_action": [
+        -0.5,
+        0.0
+      ],
+      "shielded_action": [
+        0.0,
+        0.0
+      ],
+      "baseline_action": [
+        1.7070636749267578,
+        -11.380424499511719
+      ],
+      "reward": -0.5084822100876537,
+      "cost": 0.0,
+      "inlet_temp_c": 18.074169158935547,
+      "rci": 1.0,
+      "shield_intervened": true,
+      "shield_reason": "projected",
+      "rollback_active": false
+    }
+  ],
+  "agent_checkpoint_sha256": "b1e8ef2148b9fda289127e8cc290a05d02400114b497ed3088e6a9d8a91363a2",
+  "disclaimer": "Shadow-mode simulation output. Not a production deployment artifact. Policies require human review and operational validation before live use."
+}

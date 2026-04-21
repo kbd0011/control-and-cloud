@@ -1,0 +1,13 @@
+incident_id,pattern,root_entity,driving_metric,start_time,end_time,affected_entities
+inc_000,spike,ent_23,latency_ms,2024-01-07 04:25:00,2024-01-07 06:10:00,"ent_05,ent_11,ent_17,ent_23"
+inc_001,drift,ent_14,memory_util,2024-01-04 04:25:00,2024-01-04 06:10:00,"ent_02,ent_03,ent_04,ent_05,ent_08,ent_09,ent_10,ent_11,ent_14,ent_15,ent_16,ent_17,ent_20,ent_21,ent_22,ent_23"
+inc_002,saturation,ent_16,cpu_util,2024-01-02 01:25:00,2024-01-02 02:20:00,"ent_04,ent_10,ent_16,ent_22"
+inc_003,correlated_failure,ent_22,error_rate,2024-01-04 15:45:00,2024-01-04 17:25:00,"ent_04,ent_10,ent_16,ent_22"
+inc_004,spike,ent_15,latency_ms,2024-01-05 12:30:00,2024-01-05 13:10:00,"ent_03,ent_09,ent_15,ent_21"
+inc_005,drift,ent_22,memory_util,2024-01-04 21:10:00,2024-01-04 22:00:00,"ent_04,ent_10,ent_16,ent_22"
+inc_006,saturation,ent_01,cpu_util,2024-01-05 08:30:00,2024-01-05 09:45:00,"ent_01,ent_07,ent_13,ent_19"
+inc_007,correlated_failure,ent_13,error_rate,2024-01-03 10:55:00,2024-01-03 11:25:00,"ent_01,ent_07,ent_13,ent_19"
+inc_008,spike,ent_00,latency_ms,2024-01-07 02:30:00,2024-01-07 03:15:00,"ent_00,ent_01,ent_02,ent_03,ent_04,ent_05,ent_06,ent_07,ent_08,ent_09,ent_10,ent_11,ent_12,ent_13,ent_14,ent_15,ent_16,ent_17,ent_18,ent_19,ent_20,ent_21,ent_22,ent_23"
+inc_009,drift,ent_17,memory_util,2024-01-03 08:30:00,2024-01-03 09:45:00,"ent_05,ent_11,ent_17,ent_23"
+inc_010,saturation,ent_05,cpu_util,2024-01-02 08:55:00,2024-01-02 10:45:00,"ent_05,ent_11,ent_17,ent_23"
+inc_011,correlated_failure,ent_06,error_rate,2024-01-04 13:40:00,2024-01-04 14:40:00,"ent_00,ent_01,ent_02,ent_03,ent_04,ent_05,ent_06,ent_07,ent_08,ent_09,ent_10,ent_11,ent_12,ent_13,ent_14,ent_15,ent_16,ent_17,ent_18,ent_19,ent_20,ent_21,ent_22,ent_23"

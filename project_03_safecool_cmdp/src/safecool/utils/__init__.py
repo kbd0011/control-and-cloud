@@ -1,0 +1,1 @@
+"""safecool.utils subpackage."""

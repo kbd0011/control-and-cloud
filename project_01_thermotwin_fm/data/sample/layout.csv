@@ -1,0 +1,9 @@
+rack_id,aisle,cooling_unit_id,x,y
+rack_00,A,cu_00,0,0
+rack_01,A,cu_01,1,0
+rack_02,A,cu_00,2,0
+rack_03,A,cu_01,3,0
+rack_04,B,cu_00,0,1
+rack_05,B,cu_01,1,1
+rack_06,B,cu_00,2,1
+rack_07,B,cu_01,3,1
