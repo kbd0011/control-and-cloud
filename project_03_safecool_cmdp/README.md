@@ -26,7 +26,6 @@ A runnable, end-to-end Python project that builds an offline RL dataset from thr
 - [How to run: distillation](#how-to-run-distillation)
 - [How to run: deploy / decision path](#how-to-run-deploy--decision-path)
 - [How to run: tests](#how-to-run-tests)
-- [Design notes](#design-notes)
 
 ## Problem framing
 
@@ -151,38 +150,38 @@ The two layers are intentionally redundant. The CMDP penalty shapes what the age
 
 ## Results
 
-All numbers below come from a single CLI run on the default configs (local CPU, 3,456 transitions, 20 world-model epochs, 30 agent epochs, 3 eval episodes per scenario).
+All numbers below come from a single CLI run on the default configs (local CPU, 3,456 transitions, 20 world-model epochs, 30 agent epochs, 3 evaluation episodes per scenario, 12 per policy). They are saved in `artifacts/` (`training_report.json`, `eval_report.json`, `eval_by_policy.csv`, `surrogate.json`, `deploy_report.json`) and shown in the executed `notebooks/demo.ipynb`.
 
-**FQE after training:** reward estimate **-15.56** (sum of discounted episode rewards), cost estimate **0.00** (below the 1.92 budget). Training gate **PASS**. The Lagrangian multiplier λ drops from 0.1 to 0.0 over the run because the conservative-policy-heavy buffer dominates the learned behavior.
+**Off-policy evaluation after training:** FQE reward estimate **−15.56** (sum of discounted episode rewards) and cost estimate **0.00**, below the 1.92 budget, so the training gate **passes**. WIS gives a reward estimate of −10.90 (bootstrap CI −12.87 to −9.54) and a cost estimate of 0.40. The Lagrangian multiplier λ decays from 0.09 after the first epoch to 0 by epoch 14, because the estimated cost stays under the budget.
 
-**Evaluation across 4 scenarios (3 episodes each):**
+**Evaluation across 4 scenarios (12 episodes per policy):**
 
-| Policy | Mean energy (kW) | Mean inlet (°C) | CVaR-95 inlet (°C) | Violations / ep. | Shield interventions / ep. |
+| Policy | Mean energy (kW) | Mean inlet (°C) | CVaR-95 inlet (°C, mean per episode) | Episodes with a violation | Shield interventions / ep. |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| rule_based | 3.28 | 23.89 | 24.70 | 0.00 | 0.0 |
-| conservative | 7.57 | 17.24 | 21.14 | 0.00 | 0.0 |
-| agent | 4.29 | 19.36 | 22.21 | 0.17 | 0.0 |
-| **agent_shielded** | **4.30** | **19.32** | **22.16** | **0.08** | **67.6** |
+| rule_based | 3.17 | 23.88 | 24.68 | 0 / 12 | 0 |
+| conservative | 7.57 | 17.11 | 21.07 | 0 / 12 | 0 |
+| agent | 4.37 | 18.75 | 21.82 | 1 / 12 | 0 |
+| **agent_shielded** | **4.38** | **18.74** | **21.80** | **0 / 12** | **74.3** |
 
 **What to read from this:**
 
-- The shield genuinely helps: it **halves the per-episode violation rate** of the learned agent (0.17 → 0.08) and **drops per-episode total safety cost from 0.58 to 0.005** at essentially zero energy overhead (+0.01 kW).
-- The conservative behavior policy dominated the buffer, so the agent learned to imitate its over-cooling tendency (mean inlet 19.3°C instead of the rule_based's 23.9°C). A richer buffer with more diverse reward-seeking trajectories would let the agent operate closer to the energy-optimal setpoint.
-- Both agent variants fail the CVaR-95 gate in one heatwave scenario (CVaR-95 inlet reaches 27.5°C > 27.0°C limit without the shield; 26.9°C with shield, still over 27.0°C in one run out of three — a narrow miss). The honest read is: this is a research baseline that demonstrates the full stack, but a production-grade policy needs a larger buffer, longer training, and tighter shield thresholds before any live-facility evaluation.
-- Distilled surrogate achieves **95.5% action agreement within half a grid cell** on the held-out split — the tree rules are a faithful interpretable approximation of the agent's greedy policy.
-- Shadow-mode deploy runs on all three tested scenarios (nominal, spike, heatwave) complete **without rollback** under the default thresholds, logging ≈90 shield interventions over 200 steps in each case.
+- **The shield removed the one safety violation.** Unshielded, the agent had one violating episode (degradation scenario: CVaR-95 inlet 27.06 °C, max 27.18 °C, above the 27.0 °C limit) and fails the go/no-go check. Shielded, the same episode peaks at 26.91 °C after 2 interventions, there are no violations, the worst episode CVaR-95 is 26.86 °C, and the go/no-go check passes. Energy cost of the shield: +0.01 kW.
+- **Most interventions did not change outcomes.** The shield intervened on 88–90 of 96 steps per episode in the nominal, spike and heatwave scenarios, yet those episodes' metrics are identical to the unshielded agent's. The consequential interventions were the 2 in the degradation episode above.
+- **The agent runs cool.** It uses 4.37 kW against the rule-based controller's 3.17 kW and holds inlet near 18.7 °C against 23.9 °C, closer to the conservative behavior policy, even though the buffer has 12 episodes from each of the three behavior policies. Pulling it toward the energy-optimal setpoint needs more data and tuning of the conservative penalty.
+- **Distillation:** depth-4 trees agree with the agent's greedy action within half a grid cell on **95.5%** of 200 held-out states (MAE 0.026 on the coolant delta and 0.075 on the fan delta).
+- **Shadow-mode deploy:** the saved deploy report (heatwave, 96 steps) finished without rollback, with the shield projecting 89 of 96 actions and max inlet 21.34 °C.
 
 ## Limitations
 
 Being explicit about what this repo is and is not:
 
 1. **The environment is a local approximation, not real telemetry or real LC-Opt.** Numbers above reflect simulator dynamics, not a real facility. The ingestion interface matches what a Modelica-backed LC-Opt wrapper would expose, but the connection is not made.
-2. **The agent under-explores.** Because the offline buffer is dominated by the conservative behavior policy, the CQL penalty pulls the agent toward conservative behavior and the reward-seeking pressure is weak. A larger, more balanced buffer would change this.
+2. **The agent stays conservative.** The buffer is balanced across three behavior policies (12 episodes each), yet the agent settles near the conservative policy's operating point; the CQL penalty and a small buffer (3,456 transitions) are the likely causes. A larger buffer and penalty tuning are the next steps.
 3. **OPE is approximate.** WIS is high-variance; FQE inherits bias from function approximation. Both are reported side-by-side so the reader can triangulate.
 4. **The shield's world-model look-ahead is only one step.** Longer horizons would catch slower build-ups but at the cost of compounding model error.
-5. **The Lagrangian multiplier schedule is simple dual ascent.** More sophisticated approaches (e.g., PID on the constraint, trust-region updates) would likely improve cost tracking.
+5. **The Lagrangian multiplier schedule is simple dual ascent.** More sophisticated approaches (e.g., PID on the constraint, trust-region updates) are options for tighter cost tracking.
 6. **No Lyapunov formulation.** The scaffold mentions a Lyapunov-based CMDP; implementing that properly needs a certified Lyapunov function over the continuous state, which is out of scope for this pass. The Lagrangian approach used here is the common practical stand-in.
-7. **Distillation uses one tree per action dim.** A joint classifier over the 25-action grid would also be reasonable; the separate-regressors choice trades a tiny amount of fidelity for much cleaner operator-facing rules.
+7. **Distillation uses one tree per action dim.** A joint classifier over the 25-action grid would also be reasonable; separate regressors give cleaner operator-facing rules.
 8. **Not a production deployment artifact.** Research baseline only. Any live use requires human review, simulator validation against a real plant, and operational guardrails well beyond what this repo provides.
 
 ## Install
@@ -251,3 +250,5 @@ pytest                                     # 55 tests, ≈20 s on CPU
 pytest -k shield                           # just the shield tests
 pytest -x -v                               # stop at first failure, verbose
 ```
+
+The workflow in `.github/workflows/tests.yml` sits inside this project folder, and GitHub Actions only runs workflows from the repository root, so these tests have not run in CI. Run them locally as above.

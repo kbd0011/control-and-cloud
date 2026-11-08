@@ -2,7 +2,7 @@
 
 **Digital twin for short-horizon rack thermal forecasting and what-if simulation in data-center environments.**
 
-A runnable, end-to-end Python project that ingests multi-rack telemetry, builds a topology-aware sequence model with calibrated uncertainty, and supports counterfactual simulation of cooling and workload changes through both a CLI and a REST API.
+A runnable, end-to-end Python project that ingests multi-rack telemetry, builds a topology-aware sequence model with quantile uncertainty bands (plus a split-conformal correction measured at evaluation), and supports counterfactual simulation of cooling and workload changes through both a CLI and a REST API. All data in this repo is synthetic, produced by the bundled generator.
 
 ## Table of contents
 
@@ -20,23 +20,22 @@ A runnable, end-to-end Python project that ingests multi-rack telemetry, builds 
 - [How to run: simulation](#how-to-run-simulation)
 - [How to run: API](#how-to-run-api)
 - [How to run: tests](#how-to-run-tests)
-- [Design notes](#design-notes)
 
 ## Problem framing
 
-Dense racks generate short-horizon thermal dynamics that are hard to reason about with per-sensor threshold monitoring. Operators need forecasts of inlet and outlet temperature over the next 5–60 minutes, with calibrated uncertainty and an honest what-if interface for setpoint, fan, and load changes. This repo provides a minimal but complete stack for that.
+Dense racks generate short-horizon thermal dynamics that are hard to reason about with per-sensor threshold monitoring. Operators need forecasts of inlet and outlet temperature over the next 5–60 minutes, with uncertainty bands and a what-if interface for setpoint, fan, and load changes. This repo builds a small end-to-end version of that stack and measures it against a naive baseline.
 
 ## What is actually implemented
 
-- **Ingestion** for M100-style tabular telemetry (CSV or Parquet) with a canonical schema, robust resampling, and a missingness mask (`src/thermotwin/data/ingest_m100.py`).
+- **Ingestion** for M100-style tabular telemetry (CSV or Parquet) with a canonical schema, resampling to a uniform cadence, and a missingness mask (`src/thermotwin/data/ingest_m100.py`).
 - **ClusterData-style workload ingest** producing regime features, including a synthetic fallback trace for reproducibility (`src/thermotwin/data/ingest_clusterdata.py`).
 - **Synthetic telemetry generator** with diurnal + weekly workload cycles, first-order thermal lag, cooling degradation events, and sensor noise (`src/thermotwin/data/synthetic.py`).
-- **Leakage-safe feature pipeline**: robust median/IQR scaler fit on the training split only, sliding-window tensor construction, time-block splits (`src/thermotwin/features/resample_and_window.py`).
+- **Feature pipeline**: robust median/IQR scaler fit on the training split only, sliding-window tensor construction, time-block splits (`src/thermotwin/features/resample_and_window.py`).
 - **Layout graph**: racks as nodes, hard edges from aisle adjacency and shared cooling units, soft edges from inlet-temperature correlation, plus symmetric-normalized adjacency for GCN use (`src/thermotwin/graphs/layout_graph.py`).
-- **Forecasting backbone** (`src/thermotwin/models/foundation_backbone.py`): TCN + GRU sequence encoder with monotone quantile heads and a residual-from-last-observed-target decoder. *Honest naming note*: the file is called `foundation_backbone.py` to preserve the scaffold interface, but it is NOT a wrapper around a pretrained foundation model. It is a trainable local backbone. A TSFM such as TimesFM or Chronos-2 could plug into the same interface later.
+- **Forecasting backbone** (`src/thermotwin/models/foundation_backbone.py`): TCN + GRU sequence encoder with monotone quantile heads and a residual-from-last-observed-target decoder. *Naming note*: the file is called `foundation_backbone.py` to preserve the scaffold interface, but it is NOT a wrapper around a pretrained foundation model. It is a trainable local backbone. A TSFM such as TimesFM or Chronos-2 could plug into the same interface later.
 - **Graph state-space** (`src/thermotwin/models/graph_state_space.py`): a lightweight GCN that mixes encoder latents across racks at every timestep.
 - **Differentiable physics penalties** (`src/thermotwin/models/physics_losses.py`): monotonicity, smoothness, and control-lag soft constraints plus pinball loss.
-- **Simple baselines** (`src/thermotwin/models/baselines.py`): naive-last and per-horizon ridge autoregression for honest comparison.
+- **Simple baselines** (`src/thermotwin/models/baselines.py`): naive-last and per-horizon ridge autoregression for comparison.
 - **Training loop** with AdamW, gradient clipping, early stopping, experiment artifacts, and deterministic seeding (`src/thermotwin/train.py`).
 - **Evaluation** with point metrics, per-horizon breakdown, quantile coverage, split conformal calibration, and hotspot classification metrics (`src/thermotwin/evaluate.py`).
 - **What-if simulator** covering six operator-relevant scenarios (setpoint up/down, fan boost, load spike, cooling degradation) with deterministic ranking by risk-adjusted objective (`src/thermotwin/simulate.py`).
@@ -91,25 +90,24 @@ The forecaster is trained on sliding windows of multivariate telemetry. For each
 4. **Decoder**: per-horizon MLP over (encoder summary, future controls) with multi-target, multi-quantile output head.
 5. **Residual from last observed target**: all quantiles are additively shifted by the last observed target value. This is a strong, explicit inductive bias that prevents the network from having to re-derive naive-last performance from a compressed summary.
 6. **Monotone quantile construction**: the low quantile is the base, and higher quantiles are obtained by cumulative softplus of additional offsets with a small positive floor so intervals do not collapse.
-7. **Split conformal calibration** is computed on the validation set and used at evaluation time to correct undercoverage.
+7. **Split conformal calibration** is computed on the validation set and applied at evaluation time to correct undercoverage. The API returns the raw model quantiles; the conformal correction is not applied there.
 
 ## Results
 
-Trained on 10 days × 8 racks of synthetic data (5-minute cadence, 24-step context, 12-step horizon = 1 hour forecast). Single CPU run, ~2 minutes of training.
+Trained on 10 days × 8 racks of synthetic data (5-minute cadence, 24-step context, 12-step horizon = 1 hour forecast) in a single CPU run. Values are from the executed `notebooks/demo.ipynb`; `artifacts/` is regenerated by the CLI and not committed.
 
 | Metric                                        |     Model |     Naive-last |
 | --------------------------------------------- | --------: | -------------: |
-| MAE (°C, averaged over horizons & targets)    |  **0.40** |       **0.34** |
-| RMSE (°C)                                     |      0.53 |           0.47 |
+| MAE (°C, averaged over horizons & targets)    |     0.400 |      **0.339** |
+| RMSE (°C)                                     |     0.530 |      **0.465** |
 | Raw 90% interval coverage                     |      0.44 |             —  |
-| Conformally calibrated 90% interval coverage  |      0.78 |             —  |
-| Conformal q_hat (scaled units)                |     0.197 |             —  |
+| Split-conformal 90% interval coverage         |      0.78 |             —  |
 
-The model is within roughly 18% of the naive-last baseline in MAE. On data with 5-minute cadence and strong autocorrelation this is the expected regime — naive-last is a genuinely strong baseline, and the value of the neural model lies in its calibrated uncertainty, topology-aware representation, and what-if interface, not in point-accuracy gains over naive.
+Naive-last wins on point accuracy: the model's MAE is 18% higher. At 5-minute cadence with strongly autocorrelated temperatures that is a strong baseline, and this small local model does not beat it. What the model adds is quantile bands, rack-graph context, and a forecast conditioned on future control settings, which the what-if layer uses. Interval coverage is below the 90% target (0.44 raw, 0.78 after the conformal correction).
 
 ### Simulation ranking (example)
 
-For a test rack, the simulator correctly orders six scenarios by predicted inlet temperature:
+For one test rack, the simulator ranks six scenarios by hotspot risk (zero for all six here), then by predicted inlet temperature:
 
 | Rank | Scenario               | Max predicted inlet (°C) | Max q_high inlet (°C) |
 | ---: | ---------------------- | ------------------------: | ---------------------: |
@@ -120,19 +118,20 @@ For a test rack, the simulator correctly orders six scenarios by predicted inlet
 |    5 | raise_setpoint_2C      |                    20.32 |                  20.71 |
 |    6 | cooling_degrade        |                    20.70 |                  21.22 |
 
-Lower coolant setpoint predicts cooler inlet temperatures; cooling degradation predicts the warmest. This physics-consistent ordering is a core sanity check for the what-if layer.
+The coolant scenarios move in the physically expected direction: a lower setpoint gives the coolest forecast, a higher setpoint a warmer one, and cooling degradation the warmest. The fan and load scenarios do not: a fan boost forecasts slightly warmer than baseline, and a 20% load spike is indistinguishable from it. For this rack, the model has picked up the coolant response but not the fan or load response.
 
 ## Limitations
 
 Being explicit about what this repo is and is not.
 
-1. **Synthetic data.** All experimental numbers are on a synthetic generator; they are a proof of pipeline, not a facility benchmark. The ingestion path is designed so real M100-style data can substitute in without code changes.
-2. **Naive-last is a strong baseline at 5-minute cadence.** The neural model is within ~18% of naive MAE, not dramatically better. For short-horizon, strongly-autocorrelated thermal processes this is expected. The neural model adds value via uncertainty quantification, graph-aware context, and what-if simulation — not point accuracy.
+1. **Synthetic data.** All experimental numbers are on a synthetic generator; they demonstrate the pipeline, not facility performance. The ingestion path is designed so real M100-style data can substitute in without code changes.
+2. **Naive-last is a strong baseline at 5-minute cadence.** The neural model's MAE is 18% higher than naive-last's. Its contribution here is uncertainty bands, graph-aware context, and control-conditioned what-if simulation, not point accuracy.
 3. **Physics penalties were found to destabilize training on this small dataset** and are disabled in the default model config. The differentiable penalty module is retained and tested, and the config flag is still present. Physics penalties should only be re-enabled with careful weight tuning and more training data.
-4. **Coverage is not yet at the nominal 90%.** Raw coverage is 0.44 and conformal calibration brings it to 0.78. A longer training run with better regularization or a wider minimum width would likely close this gap.
+4. **Coverage is not yet at the nominal 90%.** Raw coverage is 0.44 and the evaluation-time conformal correction brings it to 0.78; the API serves the raw bands. A longer training run, better regularization, or a wider minimum interval width are the next things to try.
 5. **Not a foundation model.** `foundation_backbone.py` is a local TCN + GRU, not a wrapper around TimesFM or Chronos-2. The interface is pluggable so a pretrained TSFM can be dropped in later, but this repo runs fully locally with no external weights.
-6. **Small-graph regime.** The GCN mixing layer works, but with 8 racks in the demo the adjacency is small and the graph contribution is modest. On larger rooms it should matter more.
-7. **Linear AR baseline is disabled by default at demo scale** because fitting a per-horizon ridge model on a small window set is slow; enable via the model config.
+6. **Small-graph regime.** The GCN mixing layer runs, but with 8 racks in the demo the adjacency is small and its contribution is not separately measured.
+7. **Fan and load responses are not learned.** In the simulation example, fan boost and a load spike do not move the forecast in the physically expected direction (see Results).
+8. **Linear AR baseline is disabled by default at demo scale** because fitting a per-horizon ridge model on a small window set is slow; enable via the model config.
 
 ## Install
 
@@ -212,7 +211,7 @@ python -c "from thermotwin.api import create_app; app = create_app('artifacts')"
 Endpoints:
 
 - `GET /health` — returns the rack count, context/horizon sizes, and feature order.
-- `POST /forecast` — pydantic-validated payload with `rack_id`, `context` (shape `[context_steps, n_features]`), `controls` (shape `[horizon_steps, n_controls]`). Returns median, q_low, q_high forecasts and the model version.
+- `POST /forecast` — pydantic-validated payload with `rack_id`, `context` (shape `[context_steps, n_features]`), `controls` (shape `[horizon_steps, n_controls]`). Returns median, q_low, q_high forecasts (raw model quantiles, without the conformal correction) and the model version.
 - `POST /what_if` — same payload plus `control_deltas` (dict) and `load_multiplier` (float).
 
 Both endpoints use the exact same preprocessing path as training; **no random tensors ever reach the model**.
@@ -224,5 +223,7 @@ pytest                 # 50 tests, ~30 seconds
 pytest -k backbone     # just the backbone tests
 pytest -x -v           # stop at first failure, verbose
 ```
+
+The workflow in `.github/workflows/tests.yml` sits inside this project folder, and GitHub Actions only runs workflows from the repository root, so these tests have not run in CI. Run them locally as above.
 
 
